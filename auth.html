@@ -11,7 +11,7 @@
     <br />
     <p id="placeholder"></p>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <script>
       const placeholder = document.getElementById('placeholder');
       const getToken = document.getElementById('get-token');
@@ -21,6 +21,9 @@
           'https://backend-cors.vercel.app/api/auth',
           {
             credentials: 'include',
+            headers: {
+              'Access-Control-Allow-Credentials': 'true',
+            },
           }
         );
         // axios
